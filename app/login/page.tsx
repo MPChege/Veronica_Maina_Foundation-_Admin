@@ -216,9 +216,63 @@ export default function LoginPage() {
             </button>
           </form>
 
+          {/* Demo credentials */}
+          <div
+            className="mt-8 rounded-2xl px-5 py-4"
+            style={{
+              background: "rgba(201,168,76,0.06)",
+              border: "1px solid rgba(201,168,76,0.15)",
+            }}
+          >
+            <p
+              className="text-[10px] font-bold uppercase tracking-widest mb-3"
+              style={{ color: "rgba(201,168,76,0.6)", fontFamily: "var(--font-ui)" }}
+            >
+              Demo Credentials
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-white/30 text-xs" style={{ fontFamily: "var(--font-ui)" }}>Email</span>
+                <button
+                  type="button"
+                  onClick={() => setEmail(ADMIN_EMAIL)}
+                  className="text-xs font-mono px-3 py-1 rounded-lg transition-colors hover:opacity-80"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    color: "rgba(255,255,255,0.7)",
+                    fontFamily: "var(--font-ui)",
+                  }}
+                >
+                  {ADMIN_EMAIL}
+                </button>
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <span className="text-white/30 text-xs" style={{ fontFamily: "var(--font-ui)" }}>Password</span>
+                <button
+                  type="button"
+                  onClick={() => setPassword(ADMIN_PASSWORD)}
+                  className="text-xs font-mono px-3 py-1 rounded-lg transition-colors hover:opacity-80"
+                  style={{
+                    background: "rgba(255,255,255,0.05)",
+                    color: "rgba(255,255,255,0.7)",
+                    fontFamily: "var(--font-ui)",
+                  }}
+                >
+                  {ADMIN_PASSWORD}
+                </button>
+              </div>
+            </div>
+            <p
+              className="text-white/20 text-[10px] mt-3 text-center"
+              style={{ fontFamily: "var(--font-ui)" }}
+            >
+              Click either value to auto-fill
+            </p>
+          </div>
+
           {/* Footer note */}
           <p
-            className="text-center text-white/20 text-xs mt-8"
+            className="text-center text-white/20 text-xs mt-6"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             Authorized personnel only · Veronica Maina Foundation &copy; 2026
